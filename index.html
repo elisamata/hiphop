@@ -119,12 +119,12 @@ var LZString={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234
 SimpleAudio.tracks.add(&quot;rebel&quot;, &quot;audio/public-enemy-rebel.mp3&quot;)
 SimpleAudio.tracks.add(&quot;jurassic&quot;, &quot;audio/jurassic5-i-am-somebody.mp3&quot;)
 SimpleAudio.tracks.add(&quot;white_lines&quot;, &quot;audio/g-flash-white-lines.mp3&quot;)
-SimpleAudio.tracks.add(&quot;janet&quot;, &quot;audio/janet-jackson-alright.mp3&quot;)
-SimpleAudio.tracks.add(&quot;think&quot;, &quot;audio/lyn-collins-think.mp3&quot;)
+SimpleAudio.tracks.add(&quot;Janet&quot;, &quot;audio/janet-jackson-alright.mp3&quot;)
+SimpleAudio.tracks.add(&quot;Think&quot;, &quot;audio/lyn-collins-think.mp3&quot;)
 SimpleAudio.tracks.add(&quot;911&quot;, &quot;audio/public-enemy-911.mp3&quot;)
 
-&lt;&lt;cacheaudio &quot;think&quot; &quot;audio/lyn-collins-think.mp3&quot;&gt;&gt;
-&lt;&lt;cacheaudio &quot;janet&quot; &quot;audio/janet-jackson-alright.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;Think&quot; &quot;audio/lyn-collins-think.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;Janet&quot; &quot;audio/janet-jackson-alright.mp3&quot;&gt;&gt;
 
 SimpleAudio.tracks.load()
 
@@ -324,10 +324,10 @@ Different turntable techniques such as scratching and beatmatching (holding two 
 &lt;&lt;/nobr&gt;&gt;
 
 &lt;&lt;nobr&gt;&gt;
-&lt;&lt;set $trackID = &quot;think&quot;&gt;&gt;
-&lt;&lt;set $trackID1 = &quot;janet&quot;&gt;&gt;
+&lt;&lt;set $trackID = &quot;Think&quot;&gt;&gt;
+&lt;&lt;set $trackID1 = &quot;Janet&quot;&gt;&gt;
 
-&lt;&lt;button &quot;Play/Pause &#39;Think&#39;&quot;&gt;&gt;
+&lt;&lt;button &quot;Play/Pause $trackID&quot;&gt;&gt;
     &lt;&lt;if !SimpleAudio.tracks.get($trackID).isPlaying()&gt;&gt;                       
         &lt;&lt;audio $trackID play&gt;&gt;                          
     &lt;&lt;else&gt;&gt;
@@ -335,7 +335,7 @@ Different turntable techniques such as scratching and beatmatching (holding two 
     &lt;&lt;/if&gt;&gt;
 &lt;&lt;/button&gt;&gt;
 
-&lt;&lt;button &quot;Play/Pause &#39;Alright&#39;&quot;&gt;&gt;
+&lt;&lt;button &quot;Play/Pause $trackID1&quot;&gt;&gt;
     &lt;&lt;if !SimpleAudio.tracks.get($trackID1).isPlaying()&gt;&gt;                       
         &lt;&lt;audio $trackID1 play&gt;&gt;                          
     &lt;&lt;else&gt;&gt;
