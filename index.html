@@ -116,10 +116,16 @@ var LZString={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234
         
         
       --&gt;
-      
+SimpleAudio.tracks.add(&quot;rebel&quot;, &quot;audio/public-enemy-rebel.mp3&quot;)
+SimpleAudio.tracks.add(&quot;jurassic&quot;, &quot;audio/jurassic5-i-am-somebody.mp3&quot;)
+SimpleAudio.tracks.add(&quot;white_lines&quot;, &quot;audio/g-flash-white-lines.mp3&quot;)
+SimpleAudio.tracks.add(&quot;janet&quot;, &quot;audio/janet-jackson-alright.mp3&quot;)
+SimpleAudio.tracks.add(&quot;think&quot;, &quot;audio/lyn-collins-think.mp3&quot;)
+SimpleAudio.tracks.add(&quot;911&quot;, &quot;audio/public-enemy-911.mp3&quot;)
+
 &lt;&lt;cacheaudio &quot;think&quot; &quot;audio/lyn-collins-think.mp3&quot;&gt;&gt;
 
-
+SimpleAudio.tracks.load()
 
 
 
@@ -216,8 +222,9 @@ https://www.whosampled.com/sample/552187/KMD-Boy-Who-Cried-Wolf-Malcolm-X-Fire-%
 &lt;img src= &quot;images/think-lyn-album.jpg&quot; width=&quot;300&quot;&gt;
 &lt;img src= &quot;images/think-lyn-lyrics.jpg&quot; width=&quot;300&quot;&gt;
 
+
 &lt;&lt;button &quot;Play/Pause&quot;&gt;&gt;
-    &lt;&lt;if !SimpleAudio.tracks.get(&quot;think&quot;).isPaused()&gt;&gt;
+    &lt;&lt;if !SimpleAudio.tracks.get(&quot;think&quot;).isPlaying()&gt;&gt;
         &lt;&lt;audio &quot;think&quot; play&gt;&gt;
     &lt;&lt;else&gt;&gt;
         &lt;&lt;audio &quot;think&quot; pause&gt;&gt;
