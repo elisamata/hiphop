@@ -124,6 +124,7 @@ SimpleAudio.tracks.add(&quot;think&quot;, &quot;audio/lyn-collins-think.mp3&quot
 SimpleAudio.tracks.add(&quot;911&quot;, &quot;audio/public-enemy-911.mp3&quot;)
 
 &lt;&lt;cacheaudio &quot;think&quot; &quot;audio/lyn-collins-think.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;janet&quot; &quot;audio/janet-jackson-alright.mp3&quot;&gt;&gt;
 
 SimpleAudio.tracks.load()
 
@@ -218,16 +219,18 @@ https://www.whosampled.com/sample/552187/KMD-Boy-Who-Cried-Wolf-Malcolm-X-Fire-%
     &lt;h2&gt; &quot;Think (About It)&quot; by Lyn Collins (1972) &lt;/h2&gt; &lt;!-- Heading --&gt;
     &lt;p&gt; As a longtime collaborator of soul, funk, and political icon James Brown, Lyn Collins&#39; single &quot;Think&quot; was backed by the J.B&#39;s and produced by Brown, but its distinctly feminist messaging brings the crediting of songwriting to Brown as questionable. The track has been sampled over 3500 times, often playing off of the song&#39;s themes of the voicing of discontent and the importance of sisterhood.&lt;/p&gt; &lt;!-- Text passage --&gt;
 &lt;/section&gt;
+&lt;nobr&gt;
+	&lt;img src= &quot;images/think-lyn-album.jpg&quot; width=&quot;300&quot;&gt;
+	&lt;img src= &quot;images/think-lyn-lyrics.jpg&quot; width=&quot;300&quot;&gt;
+&lt;/nobr&gt;
 
-&lt;img src= &quot;images/think-lyn-album.jpg&quot; width=&quot;300&quot;&gt;
-&lt;img src= &quot;images/think-lyn-lyrics.jpg&quot; width=&quot;300&quot;&gt;
-
+&lt;&lt;set $trackID = &quot;think&quot;&gt;&gt;
 
 &lt;&lt;button &quot;Play/Pause&quot;&gt;&gt;
-    &lt;&lt;if !SimpleAudio.tracks.get(&quot;think&quot;).isPlaying()&gt;&gt;
-        &lt;&lt;audio &quot;think&quot; play&gt;&gt;
+    &lt;&lt;if !SimpleAudio.tracks.get($trackID).isPlaying()&gt;&gt;                       
+        &lt;&lt;audio $trackID play&gt;&gt;                          
     &lt;&lt;else&gt;&gt;
-        &lt;&lt;audio &quot;think&quot; pause&gt;&gt;
+        &lt;&lt;audio $trackID pause&gt;&gt;                             
     &lt;&lt;/if&gt;&gt;
 &lt;&lt;/button&gt;&gt;
 
@@ -321,23 +324,24 @@ Different turntable techniques such as scratching and beatmatching (holding two 
 &lt;&lt;/nobr&gt;&gt;
 
 &lt;&lt;nobr&gt;&gt;
-    &lt;&lt;button &quot;Play/Pause &#39;Think&#39; Sample&quot;&gt;&gt;
-        &lt;&lt;if $thinkPaused&gt;&gt;
-            &lt;&lt;audio &quot;think&quot; time 147 play&gt;&gt;
-            &lt;&lt;set $thinkPaused to false&gt;&gt;
-        &lt;&lt;else&gt;&gt;
-            &lt;&lt;audio &quot;think&quot; pause&gt;&gt;
-            &lt;&lt;set $thinkPaused to true&gt;&gt;
-        &lt;&lt;/if&gt;&gt;  
-    &lt;&lt;/button&gt;&gt; &lt;&lt;button &quot;Play/Pause &#39;Alright&#39; Sample&quot;&gt;&gt;
-        &lt;&lt;if $alright_janetPaused&gt;&gt;
-            &lt;&lt;audio &quot;alright_janet&quot; time 104 play&gt;&gt;
-            &lt;&lt;set $alright_janetPaused to false&gt;&gt;
-        &lt;&lt;else&gt;&gt;
-            &lt;&lt;audio &quot;alright_janet&quot; pause&gt;&gt;
-            &lt;&lt;set $alright_janetPaused to true&gt;&gt;
-        &lt;&lt;/if&gt;&gt;
-    &lt;&lt;/button&gt;&gt;
+&lt;&lt;set $trackID = &quot;think&quot;&gt;&gt;
+&lt;&lt;set $trackID1 = &quot;janet&quot;&gt;&gt;
+
+&lt;&lt;button &quot;Play/Pause &#39;Think&#39;&quot;&gt;&gt;
+    &lt;&lt;if !SimpleAudio.tracks.get($trackID).isPlaying()&gt;&gt;                       
+        &lt;&lt;audio $trackID play&gt;&gt;                          
+    &lt;&lt;else&gt;&gt;
+        &lt;&lt;audio $trackID pause&gt;&gt;                             
+    &lt;&lt;/if&gt;&gt;
+&lt;&lt;/button&gt;&gt;
+
+&lt;&lt;button &quot;Play/Pause &#39;Alright&#39;&quot;&gt;&gt;
+    &lt;&lt;if !SimpleAudio.tracks.get($trackID1).isPlaying()&gt;&gt;                       
+        &lt;&lt;audio $trackID1 play&gt;&gt;                          
+    &lt;&lt;else&gt;&gt;
+        &lt;&lt;audio $trackID1 pause&gt;&gt;                             
+    &lt;&lt;/if&gt;&gt;
+&lt;&lt;/button&gt;&gt;
 &lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="46" name="Real N***** Don&#39;t Die" tags="" position="1625,325" size="100,100"></tw-passagedata></tw-storydata>
 	<script id="script-sugarcube" type="text/javascript">
 	/*! SugarCube JS */
