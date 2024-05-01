@@ -108,12 +108,12 @@ var LZString={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234
 </tw-passagedata><tw-passagedata pid="2" name="StoryInit" tags="[hidden]" position="50,125" size="100,100">SimpleAudio.tracks.add(&quot;911&quot;, &quot;audio/public-enemy-911.mp3&quot;)
 SimpleAudio.tracks.add(&quot;Janet&quot;, &quot;audio/janet-jackson-alright.mp3&quot;)
 SimpleAudio.tracks.add(&quot;Think&quot;, &quot;audio/lyn-collins-think.mp3&quot;)
+SimpleAudio.tracks.load()
 
 &lt;&lt;cacheaudio &quot;Think&quot; &quot;audio/lyn-collins-think.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;Janet&quot; &quot;audio/janet-jackson-alright.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;911&quot; &quot;audio/public-enemy-911.mp3&quot;&gt;&gt;
 
-SimpleAudio.tracks.load()
 
 
 
@@ -208,10 +208,10 @@ https://www.whosampled.com/sample/552187/KMD-Boy-Who-Cried-Wolf-Malcolm-X-Fire-%
 &lt;&lt;set $startTime =15&gt;&gt;
 
 &lt;&lt;button &quot;Play/Pause&quot;&gt;&gt;
-    &lt;&lt;if SimpleAudio.tracks.get($trackID).isPaused()&gt;&gt;                         
-        &lt;&lt;audio $trackID time $startTime play&gt;&gt;                          
+    &lt;&lt;if SimpleAudio.tracks.get($trackID).isPlaying()&gt;&gt;                         
+        &lt;&lt;audio $trackID time pause&gt;&gt;                          
     &lt;&lt;else&gt;&gt;
-        &lt;&lt;audio $trackID pause&gt;&gt;                             
+        &lt;&lt;audio $trackID time $startTime play&gt;&gt;                             
     &lt;&lt;/if&gt;&gt;
 &lt;&lt;/button&gt;&gt;
 
@@ -311,18 +311,18 @@ Different turntable techniques such as scratching and beatmatching (holding two 
 &lt;&lt;set $startTime1 =104&gt;&gt;
 
 &lt;&lt;button &quot;Play/Pause $trackID&quot;&gt;&gt;
-    &lt;&lt;if SimpleAudio.tracks.get($trackID).isPaused()&gt;&gt;                       
-        &lt;&lt;audio $trackID time $startTime play&gt;&gt;                          
+    &lt;&lt;if SimpleAudio.tracks.get($trackID).isPlaying()&gt;&gt;                        
+        &lt;&lt;audio $trackID pause&gt;&gt;                          
     &lt;&lt;else&gt;&gt;
-        &lt;&lt;audio $trackID pause&gt;&gt;                             
+        &lt;&lt;audio $trackID time $startTime play&gt;&gt;                           
     &lt;&lt;/if&gt;&gt;
 &lt;&lt;/button&gt;&gt;
 
 &lt;&lt;button &quot;Play/Pause $trackID1&quot;&gt;&gt;
-    &lt;&lt;if SimpleAudio.tracks.get($trackID1).isPaused()&gt;&gt;                        
-        &lt;&lt;audio $trackID1 time $startTime1 play&gt;&gt;                          
+    &lt;&lt;if SimpleAudio.tracks.get($trackID1).isPlaying()&gt;&gt;                        
+        &lt;&lt;audio $trackID1 pause&gt;&gt;                          
     &lt;&lt;else&gt;&gt;
-        &lt;&lt;audio $trackID1 pause&gt;&gt;                             
+        &lt;&lt;audio $trackID1 time $startTime1 play&gt;&gt;                           
     &lt;&lt;/if&gt;&gt;
 &lt;&lt;/button&gt;&gt;
 &lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="35" name="Real N***** Don&#39;t Die" tags="" position="1575,275" size="100,100"></tw-passagedata><tw-passagedata pid="36" name="I Know You Got Soul" tags="" position="800,250" size="100,100"></tw-passagedata><tw-passagedata pid="37" name="Criminal Minded" tags="" position="1500,200" size="100,100"></tw-passagedata><tw-passagedata pid="38" name="We&#39;re All In The Same Gang" tags="" position="1350,150" size="100,100"></tw-passagedata><tw-passagedata pid="39" name="Fear Of A Black Planet" tags="" position="1050,125" size="100,100"></tw-passagedata></tw-storydata>
