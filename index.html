@@ -105,24 +105,15 @@ var LZString={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234
     margin-right: 10px; /* Adjust as needed */
 }
 <</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Grandmaster Flash" tags="" position="225,850" size="100,100">&lt;&lt;audio &quot;white_lines&quot; play&gt;&gt;
-</tw-passagedata><tw-passagedata pid="2" name="StoryInit" tags="[hidden]" position="50,125" size="100,100">
-      &lt;!-- 
-      Adding all audio tracks to SimpleAudio API. 
-      Syntax:
-      	track ID: first_few_of_title OR first_of_artist  IF artist is only used once
-      	SimpleAudio.tracks.add(trackId, sources)
-        	DEBUG NOTE: may need to add more relative sources than mp3
-      	empty: SimpleAudio.tracks.add(&quot;&quot;, &quot;&quot;)
-        
-        
-      --&gt;
-SimpleAudio.tracks.add(&quot;rebel&quot;, &quot;audio/public-enemy-rebel.mp3&quot;)
-SimpleAudio.tracks.add(&quot;jurassic&quot;, &quot;audio/jurassic5-i-am-somebody.mp3&quot;)
-SimpleAudio.tracks.add(&quot;white_lines&quot;, &quot;audio/g-flash-white-lines.mp3&quot;)
-SimpleAudio.tracks.add(&quot;911&quot;, &quot;audio/public-enemy-911.mp3&quot;)
+</tw-passagedata><tw-passagedata pid="2" name="StoryInit" tags="[hidden]" position="50,125" size="100,100">SimpleAudio.tracks.add(&quot;911&quot;, &quot;audio/public-enemy-911.mp3&quot;)
+SimpleAudio.tracks.add(&quot;Janet&quot;, &quot;audio/janet-jackson-alright.mp3&quot;)
+SimpleAudio.tracks.add(&quot;Think&quot;, &quot;audio/lyn-collins-think.mp3&quot;)
+SimpleAudio.tracks.load()
 
 &lt;&lt;cacheaudio &quot;Think&quot; &quot;audio/lyn-collins-think.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;Janet&quot; &quot;audio/janet-jackson-alright.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;911&quot; &quot;audio/public-enemy-911.mp3&quot;&gt;&gt;
+
 
 
 
@@ -205,7 +196,7 @@ https://www.whosampled.com/sample/552187/KMD-Boy-Who-Cried-Wolf-Malcolm-X-Fire-%
 [[Souljah&#39;s Revenge]]</tw-passagedata><tw-passagedata pid="22" name="Theme From Shaft" tags="" position="1550,1025" size="100,100">[[Analog Samples of Shaft]]
 [[Early Digital Samples of Shaft]]
 [[Late Digital Samples of Shaft]]</tw-passagedata><tw-passagedata pid="23" name="Think" tags="" position="1525,725" size="100,100">&lt;section&gt;
-    &lt;h2&gt; &quot;Think (About It)&quot; by Lyn Collins (1972) &lt;/h2&gt; &lt;!-- Heading --&gt;
+    &lt;h2&gt; PLEASE HELP &quot;Think (About It)&quot; by Lyn Collins (1972) &lt;/h2&gt; &lt;!-- Heading --&gt;
     &lt;p&gt; As a longtime collaborator of soul, funk, and political icon James Brown, Lyn Collins&#39; single &quot;Think&quot; was backed by the J.B&#39;s and produced by Brown, but its distinctly feminist messaging brings the crediting of songwriting to Brown as questionable. The track has been sampled over 3500 times, often playing off of the song&#39;s themes of the voicing of discontent and the importance of sisterhood.&lt;/p&gt; &lt;!-- Text passage --&gt;
 &lt;/section&gt;
 &lt;nobr&gt;
@@ -216,11 +207,11 @@ https://www.whosampled.com/sample/552187/KMD-Boy-Who-Cried-Wolf-Malcolm-X-Fire-%
 &lt;&lt;set $trackID = &quot;Think&quot;&gt;&gt;
 &lt;&lt;set $startTime =15&gt;&gt;
 
-&lt;&lt;button &quot;Play/Pause&quot;&gt;&gt;
-    &lt;&lt;if SimpleAudio.tracks.get($trackID).isPaused()&gt;&gt;                         
-        &lt;&lt;audio $trackID time $startTime play&gt;&gt;                          
-    &lt;&lt;else&gt;&gt;
-        &lt;&lt;audio $trackID pause&gt;&gt;                             
+&lt;&lt;button &quot;Play/Pause $trackID&quot;&gt;&gt;
+    &lt;&lt;if SimpleAudio.tracks.get($trackID).isPaused()&gt;&gt;                        
+        &lt;&lt;audio $trackID time $startTime play&gt;&gt;                        
+    &lt;&lt;elseif &gt;&gt;
+        &lt;&lt;audio $trackID pause&gt;&gt;                           
     &lt;&lt;/if&gt;&gt;
 &lt;&lt;/button&gt;&gt;
 
@@ -245,30 +236,32 @@ Samples Funky Music Is the Thing (1975) - Dynamic Corvettes, which also samples 
     &lt;h2&gt; &quot;911 Is A Joke&quot; by Public Enemy (1990)&lt;/h2&gt; &lt;!-- Heading --&gt;
 &lt;/section&gt;
 
-&lt;img src= &quot;images/fear_of.jpg
 &lt;&lt;nobr&gt;&gt;
-    &lt;img src= &quot;images/lynCollins_think.jpg&quot; width=&quot;410&quot;&gt;
-    &lt;img src= &quot;images/9111.jpg&quot; width=&quot;205&quot;&gt;
+    &lt;img src= &quot;images/think-lyn-album.jpg&quot; width=&quot;205&quot;&gt;
+    &lt;img src= &quot;images/fear-of-a-black-planet-album.jpg&quot; width=&quot;205&quot;&gt;
 &lt;&lt;/nobr&gt;&gt;
 
+&lt;&lt;set $trackID = &quot;Think&quot;&gt;&gt;
+&lt;&lt;set $trackID1 = &quot;911&quot;&gt;&gt;
+&lt;&lt;set $startTime = 84&gt;&gt;
+&lt;&lt;set $startTime1 = 3&gt;&gt;
+
 &lt;&lt;nobr&gt;&gt;
-    &lt;&lt;button &quot;Play/Pause &#39;Think&#39; Sample&quot;&gt;&gt;
-        &lt;&lt;if $thinkPaused&gt;&gt;
-            &lt;&lt;audio &quot;think&quot; time 104 play&gt;&gt;
-            &lt;&lt;set $thinkPaused to false&gt;&gt;
-        &lt;&lt;else&gt;&gt;
-            &lt;&lt;audio &quot;think&quot; pause&gt;&gt;
-            &lt;&lt;set $thinkPaused to true&gt;&gt;
-        &lt;&lt;/if&gt;&gt;  
-    &lt;&lt;/button&gt;&gt; &lt;&lt;button &quot;Play/Pause &#39;911&#39; Sample&quot;&gt;&gt;
-        &lt;&lt;if $ninePaused&gt;&gt;
-            &lt;&lt;audio &quot;nine&quot; time 60 play&gt;&gt;
-            &lt;&lt;set $ninePaused to false&gt;&gt;
-        &lt;&lt;else&gt;&gt;
-            &lt;&lt;audio &quot;nine&quot; pause&gt;&gt;
-            &lt;&lt;set $ninePaused to true&gt;&gt;
-        &lt;&lt;/if&gt;&gt;
-    &lt;&lt;/button&gt;&gt;
+&lt;&lt;button &quot;Play/Pause $trackID&quot;&gt;&gt;
+    &lt;&lt;if SimpleAudio.tracks.get($trackID).isPaused()&gt;&gt;                        
+        &lt;&lt;audio $trackID time $startTime play&gt;&gt;                        
+    &lt;&lt;else&gt;&gt;
+        &lt;&lt;audio $trackID pause&gt;&gt;                           
+    &lt;&lt;/if&gt;&gt;
+&lt;&lt;/button&gt;&gt;
+
+&lt;&lt;button &quot;Play/Pause $trackID1&quot;&gt;&gt;
+    &lt;&lt;if SimpleAudio.tracks.get($trackID1).isPaused()&gt;&gt;                        
+        &lt;&lt;audio $trackID1 time $startTime1 play&gt;&gt;                        
+    &lt;&lt;else&gt;&gt;
+        &lt;&lt;audio $trackID1 pause&gt;&gt;                           
+    &lt;&lt;/if&gt;&gt;
+&lt;&lt;/button&gt;&gt;
 &lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="26" name="Appetite For Destruction" tags="" position="1800,875" size="100,100">Samples N***ers vs The Police by Richard Pryor (INCLUDE SOUND)
 
 Samples House of Rising Funk by Afrique (INC SOUND)</tw-passagedata><tw-passagedata pid="27" name="Sound of Da Police" tags="" position="500,700" size="100,100"></tw-passagedata><tw-passagedata pid="28" name="Eye Know - De La Soul" tags="" position="500,850" size="100,100"></tw-passagedata><tw-passagedata pid="29" name="Introduction" tags="" position="250,125" size="100,100">:: Introduction
@@ -302,13 +295,10 @@ Different turntable techniques such as scratching and beatmatching (holding two 
 </tw-passagedata><tw-passagedata pid="30" name="Anger in the Nation" tags="" position="575,525" size="100,100"></tw-passagedata><tw-passagedata pid="31" name="Souljah&#39;s Revenge" tags="" position="650,375" size="100,100"></tw-passagedata><tw-passagedata pid="32" name="It&#39;s My Thing" tags="" position="1200,100" size="100,100"></tw-passagedata><tw-passagedata pid="33" name="The Magic Number" tags="" position="875,150" size="100,100"></tw-passagedata><tw-passagedata pid="34" name="Alright" tags="" position="1800,550" size="100,100">&lt;section&gt;
     &lt;h2&gt; &quot;Alright&quot; (1989) by Janet Jackson&lt;/h2&gt; &lt;!-- Heading --&gt;
 &lt;/section&gt;
-
 &lt;&lt;nobr&gt;&gt;
     &lt;img src= &quot;images/think-lyn-album.jpg&quot; width=&quot;205&quot;&gt;
     &lt;img src= &quot;images/alright-janet-album.jpg&quot; width=&quot;205&quot;&gt;
 &lt;&lt;/nobr&gt;&gt;
-
-
 &lt;&lt;nobr&gt;&gt;
     &lt;img src= &quot;images/think-lyn-lyrics.jpg&quot; width=&quot;205&quot;&gt;
     &lt;img src= &quot;images/alright-janet-lyrics.jpg&quot; width=&quot;205&quot;&gt;
@@ -321,18 +311,18 @@ Different turntable techniques such as scratching and beatmatching (holding two 
 &lt;&lt;set $startTime1 =104&gt;&gt;
 
 &lt;&lt;button &quot;Play/Pause $trackID&quot;&gt;&gt;
-    &lt;&lt;if SimpleAudio.tracks.get($trackID).isPaused()&gt;&gt;                       
-        &lt;&lt;audio $trackID time $startTime play&gt;&gt;                          
+    &lt;&lt;if SimpleAudio.tracks.get($trackID).isPaused()&gt;&gt;                        
+        &lt;&lt;audio $trackID time $startTime play&gt;&gt;                        
     &lt;&lt;else&gt;&gt;
-        &lt;&lt;audio $trackID pause&gt;&gt;                             
+        &lt;&lt;audio $trackID pause&gt;&gt;                           
     &lt;&lt;/if&gt;&gt;
 &lt;&lt;/button&gt;&gt;
 
 &lt;&lt;button &quot;Play/Pause $trackID1&quot;&gt;&gt;
     &lt;&lt;if SimpleAudio.tracks.get($trackID1).isPaused()&gt;&gt;                        
-        &lt;&lt;audio $trackID1 time $startTime1 play&gt;&gt;                          
+        &lt;&lt;audio $trackID1 time $startTime1 play&gt;&gt;                        
     &lt;&lt;else&gt;&gt;
-        &lt;&lt;audio $trackID1 pause&gt;&gt;                             
+        &lt;&lt;audio $trackID1 pause&gt;&gt;                           
     &lt;&lt;/if&gt;&gt;
 &lt;&lt;/button&gt;&gt;
 &lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="35" name="Real N***** Don&#39;t Die" tags="" position="1575,275" size="100,100"></tw-passagedata><tw-passagedata pid="36" name="I Know You Got Soul" tags="" position="800,250" size="100,100"></tw-passagedata><tw-passagedata pid="37" name="Criminal Minded" tags="" position="1500,200" size="100,100"></tw-passagedata><tw-passagedata pid="38" name="We&#39;re All In The Same Gang" tags="" position="1350,150" size="100,100"></tw-passagedata><tw-passagedata pid="39" name="Fear Of A Black Planet" tags="" position="1050,125" size="100,100"></tw-passagedata></tw-storydata>
