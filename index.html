@@ -232,16 +232,16 @@ Samples Funky Music Is the Thing (1975) - Dynamic Corvettes, which also samples 
 &lt;/section&gt;
 
 &lt;&lt;nobr&gt;&gt;
-    &lt;img src= &quot;fear-of-a-black-planet-album.jpg&quot; width=&quot;205&quot;&gt;
+    &lt;img src= &quot;images/fear-of-a-black-planet-album.jpg&quot; width=&quot;205&quot;&gt;
     &lt;img src= &quot;images/think-lyn-album.jpg&quot; width=&quot;205&quot;&gt;
 &lt;&lt;/nobr&gt;&gt;
 
-&lt;&lt;nobr&gt;&gt;
 &lt;&lt;set $trackID = &quot;Think&quot;&gt;&gt;
 &lt;&lt;set $trackID1 = &quot;911&quot;&gt;&gt;
-&lt;&lt;set $startTime =84&gt;&gt;
-&lt;&lt;set $startTime1 =3&gt;&gt;
+&lt;&lt;set $startTime = 84&gt;&gt;
+&lt;&lt;set $startTime1 = 3&gt;&gt;
 
+&lt;&lt;nobr&gt;&gt;
 &lt;&lt;button &quot;Play/Pause $trackID&quot;&gt;&gt;
     &lt;&lt;if SimpleAudio.tracks.get($trackID).isPaused()&gt;&gt;                       
         &lt;&lt;audio $trackID time $startTime play&gt;&gt;                          
