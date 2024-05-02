@@ -196,7 +196,7 @@ https://www.whosampled.com/sample/552187/KMD-Boy-Who-Cried-Wolf-Malcolm-X-Fire-%
 [[Souljah&#39;s Revenge]]</tw-passagedata><tw-passagedata pid="22" name="Theme From Shaft" tags="" position="1550,1025" size="100,100">[[Analog Samples of Shaft]]
 [[Early Digital Samples of Shaft]]
 [[Late Digital Samples of Shaft]]</tw-passagedata><tw-passagedata pid="23" name="Think" tags="" position="1525,725" size="100,100">&lt;section&gt;
-    &lt;h2&gt; PLEASE HELP &quot;Think (About It)&quot; by Lyn Collins (1972) &lt;/h2&gt; &lt;!-- Heading --&gt;
+    &lt;h2&gt; PLEASE HELP 2 &quot;Think (About It)&quot; by Lyn Collins (1972) &lt;/h2&gt; &lt;!-- Heading --&gt;
     &lt;p&gt; As a longtime collaborator of soul, funk, and political icon James Brown, Lyn Collins&#39; single &quot;Think&quot; was backed by the J.B&#39;s and produced by Brown, but its distinctly feminist messaging brings the crediting of songwriting to Brown as questionable. The track has been sampled over 3500 times, often playing off of the song&#39;s themes of the voicing of discontent and the importance of sisterhood.&lt;/p&gt; &lt;!-- Text passage --&gt;
 &lt;/section&gt;
 &lt;nobr&gt;
@@ -208,7 +208,7 @@ https://www.whosampled.com/sample/552187/KMD-Boy-Who-Cried-Wolf-Malcolm-X-Fire-%
 &lt;&lt;set $startTime =15&gt;&gt;
 
 &lt;&lt;button &quot;Play/Pause $trackID&quot;&gt;&gt;
-    &lt;&lt;if SimpleAudio.tracks.get($trackID).isPaused()&gt;&gt;                        
+    &lt;&lt;if (SimpleAudio.tracks.get($trackID).isPaused())&gt;&gt;                        
         &lt;&lt;audio $trackID time $startTime play&gt;&gt;                        
     &lt;&lt;elseif &gt;&gt;
         &lt;&lt;audio $trackID pause&gt;&gt;                           
@@ -248,7 +248,7 @@ Samples Funky Music Is the Thing (1975) - Dynamic Corvettes, which also samples 
 
 &lt;&lt;nobr&gt;&gt;
 &lt;&lt;button &quot;Play/Pause $trackID&quot;&gt;&gt;
-    &lt;&lt;if SimpleAudio.tracks.get($trackID).isPaused()&gt;&gt;                        
+    &lt;&lt;if (SimpleAudio.tracks.get($trackID).isPaused())&gt;&gt;                        
         &lt;&lt;audio $trackID time $startTime play&gt;&gt;                        
     &lt;&lt;else&gt;&gt;
         &lt;&lt;audio $trackID pause&gt;&gt;                           
@@ -256,7 +256,7 @@ Samples Funky Music Is the Thing (1975) - Dynamic Corvettes, which also samples 
 &lt;&lt;/button&gt;&gt;
 
 &lt;&lt;button &quot;Play/Pause $trackID1&quot;&gt;&gt;
-    &lt;&lt;if SimpleAudio.tracks.get($trackID1).isPaused()&gt;&gt;                        
+    &lt;&lt;if (SimpleAudio.tracks.get($trackID1).isPaused())&gt;&gt;                        
         &lt;&lt;audio $trackID1 time $startTime1 play&gt;&gt;                        
     &lt;&lt;else&gt;&gt;
         &lt;&lt;audio $trackID1 pause&gt;&gt;                           
@@ -311,7 +311,7 @@ Different turntable techniques such as scratching and beatmatching (holding two 
 &lt;&lt;set $startTime1 =104&gt;&gt;
 
 &lt;&lt;button &quot;Play/Pause $trackID&quot;&gt;&gt;
-    &lt;&lt;if SimpleAudio.tracks.get($trackID).isPaused()&gt;&gt;                        
+    &lt;&lt;if (SimpleAudio.tracks.get($trackID).isPaused())&gt;&gt;                        
         &lt;&lt;audio $trackID time $startTime play&gt;&gt;                        
     &lt;&lt;else&gt;&gt;
         &lt;&lt;audio $trackID pause&gt;&gt;                           
@@ -319,7 +319,7 @@ Different turntable techniques such as scratching and beatmatching (holding two 
 &lt;&lt;/button&gt;&gt;
 
 &lt;&lt;button &quot;Play/Pause $trackID1&quot;&gt;&gt;
-    &lt;&lt;if SimpleAudio.tracks.get($trackID1).isPaused()&gt;&gt;                        
+    &lt;&lt;if (SimpleAudio.tracks.get($trackID1).isPaused())&gt;&gt;                        
         &lt;&lt;audio $trackID1 time $startTime1 play&gt;&gt;                        
     &lt;&lt;else&gt;&gt;
         &lt;&lt;audio $trackID1 pause&gt;&gt;                           
