@@ -180,7 +180,43 @@ SimpleAudio.tracks.load()
 [[NODE: Soul]]</tw-passagedata><tw-passagedata pid="3" name="NODE: Film Soundtracks" tags="" position="1300,875" size="200,200">
 [[NODE: Speeches]] 
 [[Theme From Shaft]]
-[[NODE: Soul]]</tw-passagedata><tw-passagedata pid="4" name="Jesse Jackson I Am Somebody" tags="" position="850,1075" size="100,100">[[Rebel Without A Pause]]
+[[NODE: Soul]]</tw-passagedata><tw-passagedata pid="4" name="Jesse Jackson I Am Somebody" tags="" position="850,1075" size="100,100">&lt;section&gt;
+    &lt;h2&gt;&quot;I Am Somebody&quot; Speech by Jesse Jackson (1963) at Wattstax Music Festival (1972) &lt;/h2&gt; &lt;!-- Heading --&gt;
+    &lt;p&gt; Hella text&lt;/p&gt; &lt;!-- Text passage --&gt;
+    &lt;img src= &quot;images/jesse-wattstax.jpg&quot; width=&quot;500&quot;&gt;
+&lt;/section&gt;
+
+&lt;nobr&gt;
+	&lt;img src= &quot;images/wattstax-orange.jpg&quot; width=&quot;300&quot;&gt;
+    &lt;img src= &quot;images/jesse-album.jpg&quot; width = 300
+&lt;/nobr&gt;
+&lt;&lt;set $trackID = &quot;Concert&quot;&gt;&gt;
+&lt;&lt;set $trackID1 = &quot;Speech&quot;&gt;&gt;
+&lt;&lt;set $startTime = 1&gt;&gt;
+&lt;&lt;set $startTime1 = 260&gt;&gt;
+
+&lt;&lt;nobr&gt;&gt;
+&lt;&lt;button &quot;Play/Pause $trackID&quot;&gt;&gt;
+    &lt;&lt;if (SimpleAudio.tracks.get($trackID).isPlaying())&gt;&gt;                        
+        &lt;&lt;audio $trackID pause&gt;&gt;                        
+    &lt;&lt;else&gt;&gt;
+        &lt;&lt;audio $trackID time $startTime play&gt;&gt;                           
+    &lt;&lt;/if&gt;&gt;
+&lt;&lt;/button&gt;&gt;
+&lt;&lt;button &quot;Play/Pause $trackID1&quot;&gt;&gt;
+    &lt;&lt;if (SimpleAudio.tracks.get($trackID1).isPlaying())&gt;&gt;                        
+        &lt;&lt;audio $trackID1 pause&gt;&gt;                        
+    &lt;&lt;else&gt;&gt;
+        &lt;&lt;audio $trackID1 time $startTime1 play&gt;&gt;                           
+    &lt;&lt;/if&gt;&gt;
+&lt;&lt;/button&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;
+
+
+&lt;section&gt;
+    &lt;h2&gt; Songs that sample &quot;I Am Somebody&quot; &lt;/h2&gt; &lt;!-- Heading --&gt; &lt;!-- Text passage --&gt;
+&lt;/section&gt;
+[[Rebel Without A Pause]]
 [[Fight The Power]]
 [[I Am Somebody Jurassic 5]]
 [[If My Homie Calls]]</tw-passagedata><tw-passagedata pid="5" name="Malcolm X Fire &amp; Fury" tags="" position="1200,1175" size="100,100">[[Bring the Noise]]
@@ -197,7 +233,7 @@ https://www.whosampled.com/sample/26078/Public-Enemy-Bring-the-Noise-Malcolm-X-F
 
 </tw-passagedata><tw-passagedata pid="7" name="Rhythm Nation" tags="" position="1000,1450" size="100,100">Rhythm Nation (1989) - Janet Jackson 
 https://www.whosampled.com/sample/202561/Janet-Jackson-Rhythm-Nation-(12-United-Mix)-Malcolm-X-Fire-%26-Fury-Grass-Roots-Speech-(Side-Two)/</tw-passagedata><tw-passagedata pid="8" name="Boy Who Cried Wolf" tags="" position="1325,1475" size="100,100">Boy Who Cried Wolf (1991) - KMD
-https://www.whosampled.com/sample/552187/KMD-Boy-Who-Cried-Wolf-Malcolm-X-Fire-%26-Fury-Grass-Roots-Speech-(Side-Two)/</tw-passagedata><tw-passagedata pid="9" name="Rebel Without A Pause" tags="" position="600,825" size="100,100">&lt;section&gt;
+https://www.whosampled.com/sample/552187/KMD-Boy-Who-Cried-Wolf-Malcolm-X-Fire-%26-Fury-Grass-Roots-Speech-(Side-Two)/</tw-passagedata><tw-passagedata pid="9" name="Rebel Without A Pause" tags="" position="600,850" size="100,100">&lt;section&gt;
     &lt;h2&gt; &quot;Rebel Without A Pause&quot; by Public Enemy (1988)&lt;/h2&gt; &lt;!-- Heading --&gt;
 &lt;/section&gt;
 &lt;nobr&gt;
@@ -237,7 +273,7 @@ https://www.whosampled.com/sample/552187/KMD-Boy-Who-Cried-Wolf-Malcolm-X-Fire-%
 &lt;&lt;set $trackID = &quot;Concert&quot;&gt;&gt;
 &lt;&lt;set $trackID1 = &quot;Fight&quot;&gt;&gt;
 &lt;&lt;set $startTime = 2&gt;&gt;
-&lt;&lt;set $startTime1 = 1&gt;&gt;
+&lt;&lt;set $startTime1 = 30&gt;&gt;
 
 &lt;&lt;nobr&gt;&gt;
 &lt;&lt;button &quot;Play/Pause $trackID&quot;&gt;&gt;
@@ -311,7 +347,7 @@ https://www.whosampled.com/sample/552187/KMD-Boy-Who-Cried-Wolf-Malcolm-X-Fire-%
     &lt;&lt;/if&gt;&gt;
 &lt;&lt;/button&gt;&gt;
 &lt;&lt;/nobr&gt;&gt;
-&lt;/nobr&gt;</tw-passagedata><tw-passagedata pid="11" name="I Am Somebody Jurassic 5" tags="" position="700,1250" size="100,100">&lt;section&gt;
+&lt;/nobr&gt;</tw-passagedata><tw-passagedata pid="11" name="I Am Somebody Jurassic 5" tags="" position="700,1300" size="100,100">&lt;section&gt;
     &lt;h2&gt; &quot;I Am Somebody&quot; by Jurassic 5 (2002)&lt;/h2&gt; &lt;!-- Heading --&gt;
 &lt;/section&gt;
 &lt;nobr&gt;
